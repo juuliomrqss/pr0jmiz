@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="cont-ele.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Produção</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="logo.png" alt="">
+            </div>
+            <span class="logo_name">Produção</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="producao.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="cad-prod.html">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Usuários</span>
+                </a></li>
+                <li><a href="cad-containers.html">
+                    <i class="uil uil-box"></i>
+                    <span class="link-name">Contêiners</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Inventário</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Relatórios</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Configurações</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                    </a>
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+        </div>
+
+        <div id="cadastro-container">
+            <h2>Cadastro de Contêiner</h2>
+            <!-- Mensagem de Sucesso -->
+            <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+                <p>Cadastro realizado com sucesso!</p>
+            </div>
+
+            <form id="form-cadastro-container" action="/submit-cadastro-container" method="POST">
+                <div class="input-container">
+                    <label for="nome-container">Nome do Contêiner:</label>
+                    <input type="text" id="nome-container" name="nome-container" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="material">Material:</label>
+                    <input type="text" id="material" name="material" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="localizacao">Localização:</label>
+                    <input type="text" id="localizacao" name="localizacao" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Cadastrar Contêiner</button>
+            </form>
+
+            <!-- Exibindo Contêineres Cadastrados -->
+            <div class="container-list">
+                <h3>Contêineres Cadastrados</h3>
+                <ul id="lista-container">
+                    <!-- Lista de contêineres será gerada aqui via JavaScript -->
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="cont-ele.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Acesso</title>
+    <link rel="stylesheet" href="acesso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="text">
+            <img src="/logos/mizu.png" alt="logo" width="250" height="100">
+        </div>
+        
+        <form id="solicitacaoForm">
+            <div class="field">
+                <input type="text" id="nome" required>
+                <span class="fas fa-user"></span>
+                <label for="nome">Nome</label>
+            </div>
+
+            <div class="field">
+                <input type="email" id="email" required>
+                <span class="fas fa-envelope"></span>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="field">
+                <input type="text" id="usuario" required>
+                <span class="fas fa-user-circle"></span>
+                <label for="usuario">Usuário</label>
+            </div>
+
+            <div class="field">
+                <input type="password" id="senha" required>
+                <span class="fas fa-lock"></span>
+                <label for="senha">Senha</label>
+            </div>
+
+            <div class="field">
+                <input type="password" id="confirmar-senha" required>
+                <span class="fas fa-lock"></span>
+                <label for="confirmar-senha">Confirmar Senha</label>
+            </div>
+
+            <div class="select-options">
+                <div class="option">
+                    <input type="radio" name="setor" id="mecanica" required>
+                    <label for="mecanica">| Mecânica |</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="setor" id="eletrica" required>
+                    <label for="eletrica">Elétrica |</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="setor" id="producao" required>
+                    <label for="producao">Produção |</label>
+                </div>
+            </div>
+
+            <button type="submit">Solicitar Acesso</button>
+        </form>
+
+        <div class="forgot-pass">
+            <a href="index.html">Já possui acesso?</a>
+        </div>
+    </div>
+     <!-- Mensagem de sucesso -->
+     <div id="sucessoMensagem" class="sucesso-msg" style="display:none;">
+        <p>Solicitação feita com sucesso!</p>
+    </div>
+    <script src="acesso.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #f0f2f5;
+    text-align: center;
+}
+
+.content {
+    width: 350px; /* Diminuindo a largura do formulário */
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content .text {
+    font-size: 24px; /* Reduzindo o tamanho do título */
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #595959;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 15px; /* Menor espaçamento entre os campos */
+}
+
+.field input {
+    width: 100%;
+    padding: 12px 40px; /* Menor altura dos campos */
+    font-size: 14px; /* Tamanho menor da fonte */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.field input:focus {
+    border-color: #3498db;
+}
+
+.field span {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #40a2e3;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    opacity: 0;
+}
+
+.select-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px; /* Reduzindo o tamanho da fonte do botão */
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3a3a3a;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+}
+
+.forgot-pass a {
+    font-size: 14px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+/* Estilo para a mensagem de sucesso */
+.sucesso-msg {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
